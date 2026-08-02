@@ -215,6 +215,46 @@ img, svg {
   margin-bottom: 12px;
 }
 
+/* Perspective / credibility band */
+.perspective {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.perspective h2 {
+  font-size: clamp(23px, 3.2vw, 31px);
+  margin-bottom: 16px;
+}
+
+.perspective p {
+  color: var(--slate);
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.credentials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 26px;
+}
+
+.credentials span {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.more-link {
+  font-weight: 600;
+  font-size: 15px;
+}
+
 /* Cards / Grid */
 .grid {
   display: grid;
