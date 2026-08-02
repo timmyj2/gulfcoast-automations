@@ -262,6 +262,12 @@ img, svg {
   gap: 24px;
 }
 
+/* Four-card groups: 2x2, since auto-fit tops out at 3 columns here and
+   would otherwise leave the fourth card orphaned on its own row. */
+.grid-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   background: #fff;
   border: 1px solid var(--border);
@@ -517,6 +523,12 @@ input[type="checkbox"] {
 }
 
 /* Responsive */
+@media (max-width: 620px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
