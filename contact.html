@@ -63,12 +63,83 @@
           <label for="message">What process is costing you the most time?</label>
           <textarea id="message" name="message" required></textarea>
         </div>
+
+        <details class="optional-setup">
+          <summary>Optional: tell us about your setup — helps us prep for your review</summary>
+          <div class="optional-body">
+
+            <p class="optional-note">Everything below is optional. Skip anything that doesn't apply — it just gives us a head start before we talk.</p>
+
+            <div class="form-group">
+              <label for="team-size">Team size</label>
+              <select id="team-size" name="Team size">
+                <option value="">Select…</option>
+                <option>Just me</option>
+                <option>2–5</option>
+                <option>6–20</option>
+                <option>20+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="industry">Industry or type of business</label>
+              <input type="text" id="industry" name="Industry">
+            </div>
+
+            <div class="form-group">
+              <label for="hours">Hours per week lost to manual work</label>
+              <select id="hours" name="Hours lost per week">
+                <option value="">Select…</option>
+                <option>Under 5</option>
+                <option>5–10</option>
+                <option>10–20</option>
+                <option>20+</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+
+            <fieldset class="checkbox-group">
+              <legend>Email &amp; docs</legend>
+              <label class="checkbox-item"><input type="checkbox" name="Email and docs" value="Google Workspace"> Google Workspace</label>
+              <label class="checkbox-item"><input type="checkbox" name="Email and docs" value="Microsoft 365 / Outlook"> Microsoft 365 / Outlook</label>
+              <input type="text" class="other-input" name="Email and docs - other" placeholder="Something else?">
+            </fieldset>
+
+            <fieldset class="checkbox-group">
+              <legend>Accounting &amp; invoicing</legend>
+              <label class="checkbox-item"><input type="checkbox" name="Accounting and invoicing" value="QuickBooks"> QuickBooks</label>
+              <label class="checkbox-item"><input type="checkbox" name="Accounting and invoicing" value="Xero"> Xero</label>
+              <label class="checkbox-item"><input type="checkbox" name="Accounting and invoicing" value="FreshBooks"> FreshBooks</label>
+              <label class="checkbox-item"><input type="checkbox" name="Accounting and invoicing" value="Wave"> Wave</label>
+              <label class="checkbox-item"><input type="checkbox" name="Accounting and invoicing" value="Spreadsheets only"> Spreadsheets only</label>
+              <input type="text" class="other-input" name="Accounting and invoicing - other" placeholder="Something else?">
+            </fieldset>
+
+            <fieldset class="checkbox-group">
+              <legend>Scheduling &amp; booking</legend>
+              <label class="checkbox-item"><input type="checkbox" name="Scheduling and booking" value="Calendly"> Calendly</label>
+              <label class="checkbox-item"><input type="checkbox" name="Scheduling and booking" value="Acuity"> Acuity</label>
+              <label class="checkbox-item"><input type="checkbox" name="Scheduling and booking" value="Square Appointments"> Square Appointments</label>
+              <label class="checkbox-item"><input type="checkbox" name="Scheduling and booking" value="Google Calendar only"> Google Calendar only</label>
+              <label class="checkbox-item"><input type="checkbox" name="Scheduling and booking" value="Phone or paper"> Phone or paper</label>
+              <input type="text" class="other-input" name="Scheduling and booking - other" placeholder="Something else?">
+            </fieldset>
+
+            <fieldset class="checkbox-group">
+              <legend>CRM / customer tracking</legend>
+              <label class="checkbox-item"><input type="checkbox" name="CRM" value="HubSpot"> HubSpot</label>
+              <label class="checkbox-item"><input type="checkbox" name="CRM" value="Salesforce"> Salesforce</label>
+              <label class="checkbox-item"><input type="checkbox" name="CRM" value="Jobber"> Jobber</label>
+              <label class="checkbox-item"><input type="checkbox" name="CRM" value="Spreadsheets"> Spreadsheets</label>
+              <label class="checkbox-item"><input type="checkbox" name="CRM" value="Nothing formal"> Nothing formal</label>
+              <input type="text" class="other-input" name="CRM - other" placeholder="Something else?">
+            </fieldset>
+
+          </div>
+        </details>
+
         <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
       </form>
-
-      <div class="contact-info" style="margin-top: 40px;">
-        <p>Prefer email? Reach out directly at <a href="mailto:hello@gulfcoastautomation.com">hello@gulfcoastautomation.com</a></p>
-      </div>
 
     </div>
   </section>

@@ -22,6 +22,5 @@ Deployed via Cloudflare Pages, connected to this repo. Pushes to `main` deploy a
 
 ## To-do
 
-- Replace `YOUR_FORM_ID` in `contact.html` with a real Formspree form ID
-- Replace the placeholder email address in `contact.html` with the real contact email
+- **Required before launch:** replace `YOUR_FORM_ID` in `contact.html` with a real Formspree form ID. The form is the only contact path on the site — until this is set, submissions go nowhere.
 - Review and refine services/about copy
