@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Dashboard: Bayou City Lawn Co. | Gulf Coast Automation</title>
+<meta name="description" content="A sample operations dashboard built by Gulf Coast Automation for a fictional Houston lawn care company — routes, weekly schedule, and revenue/expenses in one place.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Gulf Coast Automation logo">
+      GULF COAST <span class="accent-word">AUTOMATION</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn btn-primary">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="demo-banner">
+    <div class="container demo-banner-inner">
+      <div>
+        <div class="eyebrow">Sample Client Dashboard</div>
+        <h1>Bayou City Lawn Co. — Operations Dashboard</h1>
+        <p>This is a fictional Houston lawn care company. Everything below — routes, schedule, revenue — is sample data showing the kind of simple, everyday dashboard Gulf Coast Automation can build to replace whiteboards, group texts, and spreadsheets.</p>
+      </div>
+      <a href="services.html" class="btn btn-outline demo-banner-link">← Back to Services</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="kpi-grid">
+        <div class="card kpi-card">
+          <div class="kpi-label">Revenue This Week</div>
+          <div class="kpi-value">$4,850</div>
+          <div class="kpi-trend up">↑ 8% vs last week</div>
+        </div>
+        <div class="card kpi-card">
+          <div class="kpi-label">Jobs Completed</div>
+          <div class="kpi-value">38</div>
+          <div class="kpi-trend">of 44 scheduled</div>
+        </div>
+        <div class="card kpi-card">
+          <div class="kpi-label">Active Customers</div>
+          <div class="kpi-value">96</div>
+          <div class="kpi-trend up">↑ 3 new this month</div>
+        </div>
+        <div class="card kpi-card">
+          <div class="kpi-label">Avg. Job Value</div>
+          <div class="kpi-value">$85</div>
+          <div class="kpi-trend">across all crews</div>
+        </div>
+        <div class="card kpi-card">
+          <div class="kpi-label">Outstanding Invoices</div>
+          <div class="kpi-value">$620</div>
+          <div class="kpi-trend down">3 invoices, 2 overdue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Schedule &amp; Routes</div>
+        <h2>This week's route, day by day</h2>
+      </div>
+
+      <div class="day-tabs" role="tablist" aria-label="Day of week">
+        <button class="day-tab active" data-day="mon" type="button">Mon</button>
+        <button class="day-tab" data-day="tue" type="button">Tue</button>
+        <button class="day-tab" data-day="wed" type="button">Wed</button>
+        <button class="day-tab" data-day="thu" type="button">Thu</button>
+        <button class="day-tab" data-day="fri" type="button">Fri</button>
+        <button class="day-tab" data-day="sat" type="button">Sat</button>
+      </div>
+
+      <div class="route-panel active" id="day-mon">
+        <div class="route-meta">Crew 1 · 7 stops · The Heights &amp; Garden Oaks · start 7:30 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>Danny Ruiz</strong><span>412 Waverly St, The Heights</span></div><span class="stop-time">7:30 – 8:00 AM</span><span class="status-chip done">Completed</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Priya Nair</strong><span>1108 Yale St, The Heights</span></div><span class="stop-time">8:00 – 8:30 AM</span><span class="status-chip done">Completed</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>Marcus Webb</strong><span>2203 Rutland St, Woodland Heights</span></div><span class="stop-time">8:30 – 9:15 AM</span><span class="status-chip progress">In Progress</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>Sandra Kim</strong><span>734 Byrne St, Garden Oaks</span></div><span class="stop-time">9:15 – 9:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">5</span><div class="stop-info"><strong>The Ortiz Family</strong><span>1450 Wakefield Dr, Garden Oaks</span></div><span class="stop-time">9:45 – 10:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">6</span><div class="stop-info"><strong>Riverside Dental Group</strong><span>3100 N Shepherd Dr</span></div><span class="stop-time">10:15 – 11:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">7</span><div class="stop-info"><strong>Tom Bellinger</strong><span>918 Arlington St, Woodland Heights</span></div><span class="stop-time">11:00 – 11:30 AM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+
+      <div class="route-panel" id="day-tue">
+        <div class="route-meta">Crew 1 &amp; 2 · 9 stops · Bellaire &amp; West University · start 7:00 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>Grace Whitfield</strong><span>5312 Jessamine St, Bellaire</span></div><span class="stop-time">7:00 – 7:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Alan Cho</strong><span>4890 Maple St, Bellaire</span></div><span class="stop-time">7:30 – 8:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>Bellaire Family Dentistry</strong><span>5100 Bissonnet St</span></div><span class="stop-time">8:00 – 8:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>Renee Coleman</strong><span>3512 University Blvd, West U</span></div><span class="stop-time">8:45 – 9:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">5</span><div class="stop-info"><strong>James &amp; Erin Holt</strong><span>2740 Nottingham St, West U</span></div><span class="stop-time">9:15 – 9:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">6</span><div class="stop-info"><strong>Patricia Alvarez</strong><span>4103 Byron St, Bellaire</span></div><span class="stop-time">9:45 – 10:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">7</span><div class="stop-info"><strong>Kevin Trần</strong><span>5620 Jason St, Bellaire</span></div><span class="stop-time">10:15 – 10:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">8</span><div class="stop-info"><strong>West U Baptist Church</strong><span>3401 University Blvd</span></div><span class="stop-time">10:45 – 11:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">9</span><div class="stop-info"><strong>Diane Foster</strong><span>4477 Evergreen St, Bellaire</span></div><span class="stop-time">11:30 AM – 12:00 PM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+
+      <div class="route-panel" id="day-wed">
+        <div class="route-meta">Crew 1 · 6 stops · Montrose &amp; River Oaks · start 8:00 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>Owen Michaels</strong><span>1614 Missouri St, Montrose</span></div><span class="stop-time">8:00 – 8:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Lucia Fernandez</strong><span>2039 Driscoll St, Montrose</span></div><span class="stop-time">8:30 – 9:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>The Bennett Estate</strong><span>2850 Del Monte Dr, River Oaks</span></div><span class="stop-time">9:00 – 10:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>Harold Ngo</strong><span>3115 Chevy Chase Dr, River Oaks</span></div><span class="stop-time">10:00 – 10:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">5</span><div class="stop-info"><strong>Monica Reyes</strong><span>1802 Hawthorne St, Montrose</span></div><span class="stop-time">10:45 – 11:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">6</span><div class="stop-info"><strong>River Oaks Animal Clinic</strong><span>2001 Peden St</span></div><span class="stop-time">11:15 – 11:45 AM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+
+      <div class="route-panel" id="day-thu">
+        <div class="route-meta">Crew 1 &amp; 2 · 8 stops · Spring Branch &amp; Memorial · start 7:30 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>Bill Chastain</strong><span>9214 Long Point Rd, Spring Branch</span></div><span class="stop-time">7:30 – 8:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Anita George</strong><span>8801 Neuens Rd, Spring Branch</span></div><span class="stop-time">8:00 – 8:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>Spring Branch Vet Hospital</strong><span>8730 Long Point Rd</span></div><span class="stop-time">8:30 – 9:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>The Delacroix Family</strong><span>10714 Beinhorn Rd, Memorial</span></div><span class="stop-time">9:15 – 10:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">5</span><div class="stop-info"><strong>Ravi Patel</strong><span>11322 Kimberley Ln, Memorial</span></div><span class="stop-time">10:00 – 10:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">6</span><div class="stop-info"><strong>Cheryl Doss</strong><span>9645 Timberside Dr, Memorial</span></div><span class="stop-time">10:30 – 11:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">7</span><div class="stop-info"><strong>Memorial Hills HOA Common Areas</strong><span>Along Ella Lee Ln</span></div><span class="stop-time">11:00 AM – 12:00 PM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">8</span><div class="stop-info"><strong>George Whitmore</strong><span>9902 Doliver Dr, Memorial</span></div><span class="stop-time">12:00 – 12:30 PM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+
+      <div class="route-panel" id="day-fri">
+        <div class="route-meta">Crew 1 · 5 stops · Meyerland &amp; Braeswood · start 8:00 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>Ellen Marsh</strong><span>5109 Beechnut St, Meyerland</span></div><span class="stop-time">8:00 – 8:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Meyerland Plaza Office Park</strong><span>4500 Beechnut St</span></div><span class="stop-time">8:30 – 9:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>Sam Okafor</strong><span>5327 Willowbend Blvd, Meyerland</span></div><span class="stop-time">9:30 – 10:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>Denise Park</strong><span>4433 N Braeswood Blvd, Braeswood</span></div><span class="stop-time">10:00 – 10:30 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">5</span><div class="stop-info"><strong>Frank Dominguez</strong><span>4715 S Braeswood Blvd, Braeswood</span></div><span class="stop-time">10:30 – 11:00 AM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+
+      <div class="route-panel" id="day-sat">
+        <div class="route-meta">Crew 2 · 4 stops · Katy &amp; Cinco Ranch · start 8:00 AM</div>
+        <ol class="route-list">
+          <li class="route-stop"><span class="stop-num">1</span><div class="stop-info"><strong>The Hutchins Family</strong><span>2214 Falcon Landing Blvd, Katy</span></div><span class="stop-time">8:00 – 8:45 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">2</span><div class="stop-info"><strong>Wendy Suh</strong><span>4108 Cinco Ranch Blvd, Cinco Ranch</span></div><span class="stop-time">8:45 – 9:15 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">3</span><div class="stop-info"><strong>Cinco Ranch HOA Entrance Beds</strong><span>Cinco Ranch Blvd medians</span></div><span class="stop-time">9:15 – 10:00 AM</span><span class="status-chip">Scheduled</span></li>
+          <li class="route-stop"><span class="stop-num">4</span><div class="stop-info"><strong>Marcus &amp; Elise Doyle</strong><span>25710 Firethorn Dr, Katy</span></div><span class="stop-time">10:00 – 10:30 AM</span><span class="status-chip">Scheduled</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Trend</div>
+        <h2>Weekly revenue, last 6 weeks</h2>
+      </div>
+      <div class="card chart-card">
+        <div class="chart-bars">
+          <div class="chart-col"><div class="chart-bar" style="height:58%"></div><span class="chart-val">$3,920</span><span class="chart-label">Wk 1</span></div>
+          <div class="chart-col"><div class="chart-bar" style="height:66%"></div><span class="chart-val">$4,410</span><span class="chart-label">Wk 2</span></div>
+          <div class="chart-col"><div class="chart-bar" style="height:62%"></div><span class="chart-val">$4,180</span><span class="chart-label">Wk 3</span></div>
+          <div class="chart-col"><div class="chart-bar" style="height:75%"></div><span class="chart-val">$5,050</span><span class="chart-label">Wk 4</span></div>
+          <div class="chart-col"><div class="chart-bar" style="height:68%"></div><span class="chart-val">$4,560</span><span class="chart-label">Wk 5</span></div>
+          <div class="chart-col"><div class="chart-bar highlight" style="height:72%"></div><span class="chart-val">$4,850</span><span class="chart-label">Wk 6</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Finances</div>
+        <h2>Revenue &amp; expenses this month</h2>
+      </div>
+      <div class="card table-card">
+        <table class="fin-table">
+          <thead>
+            <tr><th>Category</th><th>Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr class="fin-group"><td colspan="2">Revenue</td></tr>
+            <tr><td>Mowing &amp; Edging</td><td>$14,280</td></tr>
+            <tr><td>Fertilization &amp; Weed Control</td><td>$3,650</td></tr>
+            <tr><td>Cleanup &amp; Seasonal Jobs</td><td>$1,920</td></tr>
+            <tr class="fin-subtotal"><td>Total Revenue</td><td>$19,850</td></tr>
+
+            <tr class="fin-group"><td colspan="2">Expenses</td></tr>
+            <tr><td>Crew Wages</td><td>$8,400</td></tr>
+            <tr><td>Fuel</td><td>$1,340</td></tr>
+            <tr><td>Equipment Maintenance</td><td>$860</td></tr>
+            <tr><td>Insurance</td><td>$520</td></tr>
+            <tr class="fin-subtotal"><td>Total Expenses</td><td>$11,120</td></tr>
+
+            <tr class="fin-net"><td>Net Income</td><td>$8,730</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Want something like this for your business?</h2>
+        <p>This dashboard took a fraction of the time a custom CRM would — because it only does what Bayou City actually needs. That's the same approach I'd take with yours.</p>
+        <a href="contact.html" class="btn btn-primary">Get Your Game Plan</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="Gulf Coast Automation logo">
+        GULF COAST AUTOMATION
+      </div>
+      <div class="tagline">Automate. Report. Scale.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
