@@ -1,10 +1,15 @@
 :root {
-  --ink: #14110f;
-  --paper: #f9f7f4;
-  --slate: #7a7570;
-  --accent: #2dd4bf;
-  --accent-dark: #1fae9c;
-  --border: #e6e1da;
+  --ink: #eef2f7;
+  --paper: #070b14;
+  --slate: #94a3b8;
+  /* --accent-dark reads *brighter* than --accent here: on a dark page the
+     base link/active color needs the extra brightness to stay legible,
+     while --accent (used as a fill behind light text) can sit deeper. */
+  --accent: #2563eb;
+  --accent-dark: #3b82f6;
+  --border: rgba(255, 255, 255, 0.1);
+  --surface: #101827;
+  --surface-alt: #0c111c;
 }
 
 * {
@@ -19,12 +24,12 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.55;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.15;
@@ -75,7 +80,7 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.01em;
@@ -103,7 +108,7 @@ img, svg {
   font-size: 15px;
 }
 
-.main-nav a.active {
+.main-nav a.active:not(.btn) {
   color: var(--accent-dark);
 }
 
@@ -197,7 +202,7 @@ img, svg {
 }
 
 .section-alt {
-  background: #f2efe9;
+  background: var(--surface-alt);
 }
 
 .section-header {
@@ -213,6 +218,10 @@ img, svg {
   color: var(--accent-dark);
   font-weight: 600;
   margin-bottom: 12px;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* Perspective / credibility band */
@@ -242,7 +251,7 @@ img, svg {
 }
 
 .credentials span {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 6px 14px;
@@ -269,7 +278,7 @@ img, svg {
 }
 
 .card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 24px;
@@ -279,7 +288,7 @@ img, svg {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: rgba(45, 212, 191, 0.14);
+  background: rgba(37, 99, 235, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,7 +321,7 @@ img, svg {
 }
 
 .cta-band p {
-  color: #cfc9c1;
+  color: rgba(7, 11, 20, 0.65);
   max-width: 520px;
   margin: 0 auto 20px;
 }
@@ -337,7 +346,7 @@ input, textarea, select {
   border-radius: 6px;
   font-family: inherit;
   font-size: 15px;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink);
 }
 
@@ -354,7 +363,7 @@ textarea {
 .contact-form {
   max-width: 560px;
   margin: 0 auto;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 32px;
@@ -364,7 +373,7 @@ textarea {
 .optional-setup {
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fcfbf9;
+  background: var(--surface);
   margin-bottom: 24px;
 }
 
@@ -391,7 +400,7 @@ textarea {
   width: 18px;
   height: 18px;
   border-radius: 4px;
-  background: rgba(45, 212, 191, 0.18);
+  background: rgba(37, 99, 235, 0.2);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -471,7 +480,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   font-size: 15px;
 }
@@ -522,6 +531,130 @@ input[type="checkbox"] {
   margin-top: 1.3em;
 }
 
+/* Pricing */
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-header {
+  margin-bottom: 20px;
+}
+
+.pricing-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.pricing-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pricing-desc {
+  color: var(--slate);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.pricing-features {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  display: flex;
+  gap: 10px;
+  color: var(--slate);
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.pricing-features .bullet {
+  color: var(--accent-dark);
+}
+
+.pricing-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 2px solid var(--accent-dark);
+  color: var(--accent-dark);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pricing-btn:hover {
+  background: var(--accent-dark);
+  color: var(--paper);
+}
+
+.pricing-card.featured {
+  background: var(--accent);
+  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card.featured .pricing-title,
+.pricing-card.featured .pricing-subtitle,
+.pricing-card.featured .pricing-desc,
+.pricing-card.featured .pricing-features li {
+  color: #fff;
+}
+
+.pricing-card.featured .bullet {
+  color: #fff;
+}
+
+.pricing-card.featured .pricing-btn {
+  background: #fff;
+  border-color: #fff;
+  color: var(--accent);
+}
+
+.pricing-card.featured .pricing-btn:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.pricing-card.dark {
+  background: var(--paper);
+  border-color: var(--border);
+}
+
 /* Responsive */
 @media (max-width: 620px) {
   .grid-4 {
@@ -562,5 +695,18 @@ input[type="checkbox"] {
 
   .contact-form {
     padding: 28px;
+  }
+
+  .pricing-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
   }
 }
