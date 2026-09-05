@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sample Solution: Bayou City Lawn Co. | Gulf Coast Automation</title>
-<meta name="description" content="A sample solution built by Gulf Coast Automation for a fictional Houston lawn care company — routes, weekly schedule, and revenue/expenses in one place.">
+<meta name="description" content="Sample operations dashboard for a fictional Houston lawn crew — routes, schedule, and money on one screen.">
+<meta property="og:title" content="Sample: Bayou City Lawn Co. | Gulf Coast Automation">
+<meta property="og:description" content="A simple operations dashboard — the kind of thing I build instead of a bloated CRM.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -23,7 +26,7 @@
       <img src="assets/logo.svg" alt="Gulf Coast Automation logo">
       GULF COAST <span class="accent-word">AUTOMATION</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="main-nav">
@@ -31,7 +34,7 @@
       <a href="services.html">Services</a>
       <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="nav-contact">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Book a free hour</a>
     </nav>
   </div>
 </header>
@@ -43,9 +46,9 @@
       <div>
         <div class="eyebrow">Sample Solution</div>
         <h1>Bayou City Lawn Co. — Operations Dashboard</h1>
-        <p>This is a fictional Houston lawn care company. Everything below — routes, schedule, revenue — is sample data showing the kind of simple, everyday solution Gulf Coast Automation can build to replace whiteboards, group texts, and spreadsheets.</p>
+        <p>Fictional Houston lawn crew. Sample data. This is the kind of simple dashboard I build instead of a bloated CRM.</p>
       </div>
-      <a href="services.html" class="btn btn-outline demo-banner-link">← Back to Services</a>
+      <a href="contact.html" class="btn btn-primary demo-banner-link">Want this? Book a free hour</a>
     </div>
   </section>
 
@@ -228,9 +231,9 @@
   <section class="section">
     <div class="container">
       <div class="cta-band">
-        <h2>Want something like this for your business?</h2>
-        <p>This sample solution took a fraction of the time a custom CRM would — because it only does what Bayou City actually needs. That's the same approach I'd take with yours.</p>
-        <a href="contact.html" class="btn btn-primary">Get Your Free Game Plan</a>
+        <h2>Want something like this for your shop?</h2>
+        <p>Only what you need. No bloated CRM. Same approach I’d take with yours.</p>
+        <a href="contact.html" class="btn btn-primary">Book a free hour</a>
       </div>
     </div>
   </section>
@@ -244,7 +247,8 @@
         <img src="assets/logo.svg" alt="Gulf Coast Automation logo">
         GULF COAST AUTOMATION
       </div>
-      <div class="tagline">Automate. Report. Scale.</div>
+      <div class="tagline">Houston · Automate. Report. Scale.</div>
+      <a class="footer-email" href="mailto:tjshed@gmail.com">tjshed@gmail.com</a>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
@@ -260,5 +264,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/dashboard.js"></script>
+<div class="mobile-cta" role="region" aria-label="Get started">
+  <a href="contact.html" class="btn btn-primary">Book a free hour</a>
+</div>
+
 </body>
 </html>
