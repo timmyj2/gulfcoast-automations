@@ -347,6 +347,11 @@ img, svg {
   .hero .hero-actions {
     justify-content: center;
   }
+
+  .hero-micro {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 520px) {
@@ -357,6 +362,60 @@ img, svg {
   .hero-bars {
     height: 72px;
   }
+}
+
+
+.hero-micro {
+  margin: 12px 0 0;
+  max-width: 420px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--slate);
+}
+
+.card .pain {
+  color: var(--slate);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card .outcome {
+  color: var(--ink);
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.proof-link {
+  text-align: center;
+  margin: 28px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pricing-sample-link {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pricing-card:not(.featured) .pricing-sample-link {
+  color: var(--accent-dark);
+}
+
+/* Tone down featured scale gimmick */
+.pricing-card.featured {
+  transform: none;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-6px);
 }
 
 /* Section */
@@ -479,6 +538,19 @@ img, svg {
   color: var(--slate);
   margin-bottom: 0;
   font-size: 15px;
+}
+
+.card p.pain {
+  color: var(--slate);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card p.outcome {
+  color: var(--ink);
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 /* CTA band */
@@ -794,12 +866,12 @@ input[type="checkbox"] {
 .pricing-card.featured {
   background: var(--accent);
   border-color: transparent;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  transform: none;
 }
 
 .pricing-card.featured:hover {
-  transform: scale(1.05) translateY(-10px);
+  transform: translateY(-6px);
 }
 
 .pricing-card.featured .pricing-title,
