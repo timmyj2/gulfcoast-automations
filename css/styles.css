@@ -196,6 +196,16 @@ img, svg {
   flex-wrap: wrap;
 }
 
+
+.hero .local-trust {
+  margin: 0 auto 28px;
+  max-width: 560px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+}
+
 /* Section */
 .section {
   padding: 44px 0;
