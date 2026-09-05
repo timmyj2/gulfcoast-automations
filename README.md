@@ -1,26 +1,27 @@
 # Gulf Coast Automation
 
-Marketing website for Gulf Coast Automation — helping small businesses automate manual, repetitive processes.
+Marketing site for Gulf Coast Automation — practical automation for Houston small businesses.
 
 ## Structure
 
 - `index.html` — Home
 - `services.html` — Services
+- `pricing.html` — Pricing
 - `about.html` — About
-- `contact.html` — Contact (form via [Formspree](https://formspree.io))
+- `contact.html` — Contact form
+- `lawn-care-demo.html` — Sample operations dashboard
 - `css/styles.css` — shared styles
-- `js/main.js` — mobile nav toggle
+- `js/main.js` — nav + form fallback
 - `assets/logo.svg` — brand mark
 
 ## Local development
 
-No build step required. Just open `index.html` in a browser, or serve the folder with any static file server.
+No build step. Open `index.html` or serve the folder with any static file server.
 
 ## Deployment
 
-Deployed via Cloudflare Pages, connected to this repo. Pushes to `main` deploy automatically — no build command needed.
+Cloudflare Pages, connected to this repo. Pushes to `main` deploy automatically.
 
 ## To-do
 
-- **Required before launch:** replace `YOUR_FORM_ID` in `contact.html` with a real Formspree form ID. The form is the only contact path on the site — until this is set, submissions go nowhere.
-- Review and refine services/about copy
+- **Still recommended:** replace `YOUR_FORM_ID` in `contact.html` with a real Formspree form ID. Until then, the form falls back to `mailto:tjshed@gmail.com`.

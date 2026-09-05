@@ -143,7 +143,7 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(45, 212, 191, 0.16);
   color: var(--accent-dark);
   font-weight: 700;
   font-size: 13px;
@@ -187,7 +187,7 @@
 }
 
 .status-chip.progress {
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(45, 212, 191, 0.16);
   color: var(--accent-dark);
 }
 
@@ -221,7 +221,7 @@
 .chart-bar {
   width: 100%;
   max-width: 56px;
-  background: rgba(37, 99, 235, 0.4);
+  background: rgba(45, 212, 191, 0.38);
   border-radius: 6px 6px 0 0;
 }
 

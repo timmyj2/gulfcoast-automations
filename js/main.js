@@ -4,7 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  const form = document.querySelector('.contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      const action = form.getAttribute('action') || '';
+      if (!action.includes('YOUR_FORM_ID')) return;
+      e.preventDefault();
+      const val = (name) => (form.elements[name] && form.elements[name].value) || '';
+      const subject = encodeURIComponent('Game Plan request from ' + val('name'));
+      const body = encodeURIComponent(
+        [
+          'Name: ' + val('name'),
+          'Email: ' + val('email'),
+          'Phone: ' + val('phone'),
+          'Business: ' + val('business'),
+          '',
+          val('message'),
+        ].join('\n')
+      );
+      window.location.href = 'mailto:tjshed@gmail.com?subject=' + subject + '&body=' + body;
     });
   }
 
@@ -28,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.querySelectorAll('.grid, .pricing-container').forEach((group) => {
-    const items = group.querySelectorAll(':scope > .card, :scope > .pricing-card');
+  document.querySelectorAll('.grid, .pricing-container, .steps').forEach((group) => {
+    const items = group.querySelectorAll(':scope > .card, :scope > .pricing-card, :scope > .step');
     if (!items.length) return;
     gsap.fromTo(items, { y: 50, opacity: 0 }, {
       y: 0,
